@@ -1,11 +1,11 @@
 * {
-    transition: all 0.2s ease-in-out;
+    transition: all .5s ease-in-out;
   }
   
   body {
-    background: #DCE35B;
-    background: -webkit-linear-gradient(to right, #45B649, #DCE35B);
-    background: linear-gradient(to right, #45B649, #DCE35B);
+    background: #c43e8a;
+    background: -webkit-linear-gradient(to right, #6fa8d9, #c81f92);
+    background: linear-gradient(to right, #09b0de, #e86161);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,7 +27,7 @@
     align-items: center;
     padding: 1em;
     overflow: hidden;
-    color: #DCE35B;
+    color: #bf0b0b;
   }
   
   @media only screen and (min-width: 1000px) {
@@ -55,7 +55,7 @@
   
   img.birthday {
     max-height: 40vh;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(237, 233, 233, 0.66) 0px 2px 8px 0px;
   }
   
   .text {
