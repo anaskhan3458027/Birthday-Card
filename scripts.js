@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('footer').style.display = 'none';
         }
     });
+
+    // Initialize touch events for carousel
+    initCarouselTouchEvents();
 });
 
 function showSection(sectionId) {
@@ -48,4 +51,27 @@ function moveSlide(direction) {
     }
 
     carousel.style.transform = `translateX(-${currentSlide * itemWidth}px)`;
+}
+
+function initCarouselTouchEvents() {
+    const carouselFrame = document.querySelector('.carousel-frame');
+    let startX = 0;
+    let endX = 0;
+
+    carouselFrame.addEventListener('touchstart', function(event) {
+        startX = event.touches[0].clientX;
+    });
+
+    carouselFrame.addEventListener('touchmove', function(event) {
+        endX = event.touches[0].clientX;
+    });
+
+    carouselFrame.addEventListener('touchend', function() {
+        const threshold = 50; // Minimum distance for a swipe to be considered
+        if (startX - endX > threshold) {
+            moveSlide(1);
+        } else if (endX - startX > threshold) {
+            moveSlide(-1);
+        }
+    });
 }
