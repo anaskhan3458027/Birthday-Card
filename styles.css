@@ -55,10 +55,11 @@ section.active {
   margin: 10px;
   padding: 10px;
   text-align: center;
-  width: 200px;
+  width: 200px; /* Fixed width for desktop */
 }
 
-.service-item img {
+.service-item img,
+.product-item img {
   max-width: 100%;
   height: auto;
 }
@@ -70,15 +71,14 @@ footer {
   padding: 10px 0; /* Adjust padding as needed */
   display: none; /* Initially hide the footer */
   position: absolute;
-  bottom: 0;
+  bottom: 1;
   width: 100%;
 }
 
 /* Carousel styles */
 .carousel-container {
   position: relative;
-  width: 80%;
-  margin: 0 auto;
+  width: 100%; /* Full width for mobile */
   overflow: hidden;
 }
 
@@ -94,7 +94,7 @@ footer {
 }
 
 .product-item {
-  flex: 0 0 100%;
+  flex: 0 0 20%; /* Full width for mobile */
   box-sizing: border-box;
   margin: 10px;
   background-color: #f4f4f4;
