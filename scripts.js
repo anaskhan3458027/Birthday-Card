@@ -15,10 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('footer').style.display = 'none';
         }
     });
-
-    // Initialize touch events for carousel
-    initCarouselTouchEvents();
-    updateDots();
 });
 
 function showSection(sectionId) {
@@ -41,6 +37,7 @@ let currentSlide = 0;
 function moveSlide(direction) {
     const carousel = document.querySelector('.carousel');
     const items = document.querySelectorAll('.product-item');
+    const itemWidth = items[0].offsetWidth;
     const totalItems = items.length;
     
     currentSlide += direction;
@@ -50,42 +47,5 @@ function moveSlide(direction) {
         currentSlide = 0;
     }
 
-    carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
-    updateDots();
-}
-
-function currentSlide(index) {
-    currentSlide = index;
-    const carousel = document.querySelector('.carousel');
-    carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
-    updateDots();
-}
-
-function updateDots() {
-    const dots = document.querySelectorAll('.dot');
-    dots.forEach(dot => dot.classList.remove('active'));
-    dots[currentSlide].classList.add('active');
-}
-
-function initCarouselTouchEvents() {
-    const carouselFrame = document.querySelector('.carousel-frame');
-    let startX = 0;
-    let endX = 0;
-
-    carouselFrame.addEventListener('touchstart', function(event) {
-        startX = event.touches[0].clientX;
-    });
-
-    carouselFrame.addEventListener('touchmove', function(event) {
-        endX = event.touches[0].clientX;
-    });
-
-    carouselFrame.addEventListener('touchend', function() {
-        const threshold = 50; // Minimum distance for a swipe to be considered
-        if (startX - endX > threshold) {
-            moveSlide(1);
-        } else if (endX - startX > threshold) {
-            moveSlide(-1);
-        }
-    });
+    carousel.style.transform = `translateX(-${currentSlide * itemWidth}px)`;
 }
