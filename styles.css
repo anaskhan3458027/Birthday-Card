@@ -45,7 +45,12 @@ section.active {
   background: url('service3.jpg') no-repeat center center;
   background-size: cover;
   height: 100vh; /* Ensure the home section covers the full viewport height */
-  color: white; /* Ensure the text color is white */
+  color: rgb(3, 1, 1); /* Ensure the text color is white */
+}
+#MakeOrder  {
+  color: rgb(128, 3, 3);
+  font-size: xx-large;
+ 
 }
 
 #home::before {
