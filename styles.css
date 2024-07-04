@@ -52,6 +52,10 @@ section.active {
   font-size: xx-large;
  
 }
+#Updates{
+  color: rgb(38, 128, 3);
+  font-size: xx-large;
+}
 
 #home::before {
   content: '';
