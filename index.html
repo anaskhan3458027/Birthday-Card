@@ -5,12 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download PDF Files</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .download-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            cursor: pointer;
+        }
+
+        .download-btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+        }
+
+        .download-btn:active {
+            background-color: #004494;
+            transform: scale(1.05);
+        }
+
+        .download-btn span {
+            display: inline-block;
+            position: relative;
+            transition: transform 0.2s ease;
+        }
+
+        .download-btn span:after {
+            content: '→';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: opacity 0.2s ease, right 0.2s ease;
+        }
+
+        .download-btn:hover span {
+            transform: translateX(10px);
+        }
+
+        .download-btn:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>Download PDF Files</h1>
-    
-    <!-- Link to the PDF file named 'mohdanaskhan_25082024.pdf' -->
-    <a href="mohdanaskhan_25082024.pdf" download="mohdanaskhan_25082024.pdf">Download PDF mohdanaskhan_25082024</a><br><br>
-    
+    <h1>Download Your Resume</h1>
+
+    <!-- Link to the PDF file with a colorful animated button -->
+    <a href="mohdanaskhan_25082024.pdf" download="mohdanaskhan_25082024.pdf" class="download-btn">
+        <span>Download Resume</span>
+    </a>
 </body>
 </html>
