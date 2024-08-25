@@ -107,10 +107,28 @@
             <img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="LinkedIn">
         </a>
         
-        <!-- Gmail Compose Email -->
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=anaskhan3458027@gmail.com" target="_blank" title="Compose Email">
-            <img src="https://img.icons8.com/ios-filled/50/000000/email.png" alt="Email">
-        </a>
+   <!-- Gmail Compose Email -->
+<a id="gmailLink" href="mailto:anaskhan3458027@gmail.com" title="Compose Email">
+    <img src="https://img.icons8.com/ios-filled/50/000000/email.png" alt="Email">
+</a>
+
+<script>
+    // Function to detect if the user is on a mobile device
+    function isMobileDevice() {
+        return /Mobi|Android/i.test(navigator.userAgent);
+    }
+
+    // Get the Gmail link element
+    const gmailLink = document.getElementById('gmailLink');
+
+    // Adjust the href attribute based on the device type
+    if (!isMobileDevice()) {
+        // For desktop or laptop, use Gmail's web compose URL
+        gmailLink.href = "https://mail.google.com/mail/?view=cm&fs=1&to=anaskhan3458027@gmail.com";
+    }
+</script>
+
+
 
         
         <!-- GeeksforGeeks -->
