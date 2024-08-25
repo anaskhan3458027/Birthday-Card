@@ -97,6 +97,16 @@
             text-align: center;
             margin-top: 50px;
         }
+        #visitorCount {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body>
@@ -108,38 +118,34 @@
         </a>
         
    <!-- Gmail Compose Email -->
-<a id="gmailLink" href="mailto:anaskhan3458027@gmail.com" title="Compose Email">
-    <img src="https://img.icons8.com/ios-filled/50/000000/email.png" alt="Email">
-</a>
+        <a id="gmailLink" href="mailto:anaskhan3458027@gmail.com" title="Compose Email">
+            <img src="https://img.icons8.com/ios-filled/50/000000/email.png" alt="Email">
+        </a>
+                <script>
+                     // Function to detect if the user is on a mobile device
+                    function isMobileDevice() {
+                    return /Mobi|Android/i.test(navigator.userAgent);
+                    }
 
-<script>
-    // Function to detect if the user is on a mobile device
-    function isMobileDevice() {
-        return /Mobi|Android/i.test(navigator.userAgent);
-    }
+                     // Get the Gmail link element
+                    const gmailLink = document.getElementById('gmailLink');
 
-    // Get the Gmail link element
-    const gmailLink = document.getElementById('gmailLink');
+                     // Adjust the href attribute based on the device type
+                    if (!isMobileDevice()) {
+                    // For desktop or laptop, use Gmail's web compose URL
+                    gmailLink.href = "https://mail.google.com/mail/?view=cm&fs=1&to=anaskhan3458027@gmail.com";
+                        }
+                </script>
 
-    // Adjust the href attribute based on the device type
-    if (!isMobileDevice()) {
-        // For desktop or laptop, use Gmail's web compose URL
-        gmailLink.href = "https://mail.google.com/mail/?view=cm&fs=1&to=anaskhan3458027@gmail.com";
-    }
-</script>
-
-
-
-        
         <!-- GeeksforGeeks -->
         <a href="https://www.geeksforgeeks.org/user/anaskhan3458027/" target="_blank" title="GeeksforGeeks">
             <img src="https://img.icons8.com/ios-filled/50/000000/education.png" alt="GFG">
         </a>
         
         <!-- Mobile Number -->
-<a href="tel:+917080240478" title="Mobile">
-    <img src="https://img.icons8.com/ios-filled/50/000000/phone.png" alt="Phone">
-</a>
+        <a href="tel:+917080240478" title="Mobile">
+            <img src="https://img.icons8.com/ios-filled/50/000000/phone.png" alt="Phone">
+        </a>
 
         
         <!-- GitHub -->
