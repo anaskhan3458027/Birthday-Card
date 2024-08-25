@@ -4,20 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download PDF Files</title>
+    <title>My Portfolio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f8ff;
-            text-align: center;
             padding-top: 50px;
+            margin-left: 100px; /* Add margin to make room for sidebar */
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: #333;
+            font-size: 20px;
+            transition: transform 0.3s;
+        }
+
+        .sidebar a:hover {
+            transform: scale(1.2);
+        }
+
+        .sidebar img {
+            width: 40px;
+            height: 40px;
         }
 
         h1 {
+            text-align: center;
             color: #333;
         }
 
-        .download-btn {
+        .button {
             display: inline-block;
             margin-top: 20px;
             padding: 15px 30px;
@@ -29,26 +56,27 @@
             text-decoration: none;
             transition: background-color 0.3s ease, transform 0.2s ease;
             cursor: pointer;
+            margin: 10px;
         }
 
-        .download-btn:hover {
+        .button:hover {
             background-color: #0056b3;
             transform: scale(1.1);
         }
 
-        .download-btn:active {
+        .button:active {
             background-color: #004494;
             transform: scale(1.05);
         }
 
-        .download-btn span {
+        .button span {
             display: inline-block;
             position: relative;
             transition: transform 0.2s ease;
         }
 
-        .download-btn span:after {
-            content: '→';
+        .button span:after {
+            
             position: absolute;
             opacity: 0;
             top: 0;
@@ -56,22 +84,81 @@
             transition: opacity 0.2s ease, right 0.2s ease;
         }
 
-        .download-btn:hover span {
+        .button:hover span {
             transform: translateX(10px);
         }
 
-        .download-btn:hover span:after {
+        .button:hover span:after {
             opacity: 1;
             right: 0;
+        }
+
+        .section {
+            text-align: center;
+            margin-top: 50px;
         }
     </style>
 </head>
 <body>
-    <h1>Download Your Resume</h1>
+    <!-- Vertical Sidebar with Icons -->
+    <div class="sidebar">
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/mohd-anas-khan-7179a9240?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" title="LinkedIn">
+            <img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="LinkedIn">
+        </a>
+        
+        <!-- Email -->
+        <a href="anaskhan3458027@gmail.com" title="Email">
+            <img src="https://img.icons8.com/ios-filled/50/000000/email.png" alt="Email">
+        </a>
+        
+        <!-- GeeksforGeeks -->
+        <a href="https://www.geeksforgeeks.org/user/anaskhan3458027/" target="_blank" title="GeeksforGeeks">
+            <img src="https://img.icons8.com/ios-filled/50/000000/education.png" alt="GFG">
+        </a>
+        
+        <!-- Mobile Number -->
+        <a href="+917080240478" title="Mobile">
+            <img src="https://img.icons8.com/ios-filled/50/000000/phone.png" alt="Phone">
+        </a>
+        
+        <!-- GitHub -->
+        <a href="https://github.com/anaskhan3458027" target="_blank" title="GitHub">
+            <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub">
+        </a>
+        
+        <!-- Graduation Marksheet or Degree -->
+        <a href="graduation_marksheet.pdf" download="Graduation_Marksheet.pdf" title="Graduation Degree">
+            <img src="https://img.icons8.com/ios-filled/50/000000/document.png" alt="Degree">
+        </a>
+    </div>
 
-    <!-- Link to the PDF file with a colorful animated button -->
-    <a href="mohdanaskhan_25082024.pdf" download="mohdanaskhan_25082024.pdf" class="download-btn">
-        <span>Download Resume</span>
-    </a>
+    <div class="section">
+        <h1>Welcome to My Portfolio</h1>
+
+        <!-- Section to download resume -->
+        <a href="mohdanaskhan_25082024.pdf" download="mohdanaskhan_25082024.pdf" class="button">
+            <span>Download Resume</span>
+        </a>
+
+        <!-- Section for live project links -->
+        <h2>Check Out My Live Projects</h2>
+
+        <!-- Link to live project 1 -->
+        <a href="https://effortless-tiramisu-ee2262.netlify.app/" target="_blank" class="button">
+            <span>Wheather Network</span>
+        </a>
+
+        <!-- Link to live project 2 -->
+        <a href="https://heartfelt-buttercream-bfcb7a.netlify.app/" target="_blank" class="button">
+            <span>Wikification Tool</span>
+        </a>
+
+        <!-- Add more projects as needed -->
+
+        <!-- Section for additional information -->
+        <h2>About Me</h2>
+        <p>Hello! I'm a passionate developer with experience in web development, software engineering, and more. Explore my projects and feel free to download my resume.</p>
+    </div>
 </body>
 </html>
