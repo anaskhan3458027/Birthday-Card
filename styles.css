@@ -67,6 +67,19 @@ h1 {
     height: 40px;
 }
 
+.section {
+    text-align: center; /* Center-align the content within the section */
+}
+
+.file-option {
+    display: flex; /* Use flexbox for easy centering */
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Align items vertically centered */
+    gap: 20px; /* Space between the open and download buttons */
+    margin-bottom: 20px; /* Add some margin below for spacing */
+}
+
+
 /* Media Queries for Responsive Design */
 
 /* Mobile Styles */
