@@ -1,0 +1,102 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    padding-top: 50px;
+    margin-left: 100px; /* Add margin to make room for sidebar */
+}
+
+.sidebar {
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    transition: transform 0.3s;
+}
+
+.sidebar a:hover {
+    transform: scale(1.2);
+}
+
+.sidebar img {
+    width: 40px;
+    height: 40px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+.button:active {
+    background-color: #004494;
+    transform: scale(1.05);
+}
+
+.button span {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.button span:after {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: opacity 0.2s ease, right 0.2s ease;
+}
+
+.button:hover span {
+    transform: translateX(10px);
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#visitorCount {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}

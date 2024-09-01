@@ -5,109 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
-            padding-top: 50px;
-            margin-left: 100px; /* Add margin to make room for sidebar */
-        }
-
-        .sidebar {
-            position: fixed;
-            top: 50%;
-            left: 10px;
-            transform: translateY(-50%);
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .sidebar a {
-            text-decoration: none;
-            color: #333;
-            font-size: 20px;
-            transition: transform 0.3s;
-        }
-
-        .sidebar a:hover {
-            transform: scale(1.2);
-        }
-
-        .sidebar img {
-            width: 40px;
-            height: 40px;
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-
-        .button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 30px;
-            font-size: 18px;
-            color: #fff;
-            background-color: #007bff;
-            border: none;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            cursor: pointer;
-            margin: 10px;
-        }
-
-        .button:hover {
-            background-color: #0056b3;
-            transform: scale(1.1);
-        }
-
-        .button:active {
-            background-color: #004494;
-            transform: scale(1.05);
-        }
-
-        .button span {
-            display: inline-block;
-            position: relative;
-            transition: transform 0.2s ease;
-        }
-
-        .button span:after {
-            
-            position: absolute;
-            opacity: 0;
-            top: 0;
-            right: -20px;
-            transition: opacity 0.2s ease, right 0.2s ease;
-        }
-
-        .button:hover span {
-            transform: translateX(10px);
-        }
-
-        .button:hover span:after {
-            opacity: 1;
-            right: 0;
-        }
-
-        .section {
-            text-align: center;
-            margin-top: 50px;
-        }
-        #visitorCount {
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            background-color: #fff;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Vertical Sidebar with Icons -->
@@ -117,25 +15,10 @@
             <img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="LinkedIn">
         </a>
         
-   <!-- Gmail Compose Email -->
+        <!-- Gmail Compose Email -->
         <a id="gmailLink" href="mailto:anaskhan3458027@gmail.com" title="Compose Email">
             <img src="https://img.icons8.com/ios-filled/50/000000/email.png" alt="Email">
         </a>
-                <script>
-                     // Function to detect if the user is on a mobile device
-                    function isMobileDevice() {
-                    return /Mobi|Android/i.test(navigator.userAgent);
-                    }
-
-                     // Get the Gmail link element
-                    const gmailLink = document.getElementById('gmailLink');
-
-                     // Adjust the href attribute based on the device type
-                    if (!isMobileDevice()) {
-                    // For desktop or laptop, use Gmail's web compose URL
-                    gmailLink.href = "https://mail.google.com/mail/?view=cm&fs=1&to=anaskhan3458027@gmail.com";
-                        }
-                </script>
 
         <!-- GeeksforGeeks -->
         <a href="https://www.geeksforgeeks.org/user/anaskhan3458027/" target="_blank" title="GeeksforGeeks">
@@ -147,7 +30,6 @@
             <img src="https://img.icons8.com/ios-filled/50/000000/phone.png" alt="Phone">
         </a>
 
-        
         <!-- GitHub -->
         <a href="https://github.com/anaskhan3458027" target="_blank" title="GitHub">
             <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub">
@@ -186,5 +68,7 @@
         <h2>About Me</h2>
         <p>Hello! I'm a passionate developer with experience in web development, software engineering, and more. Explore my projects and feel free to download my resume.</p>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
