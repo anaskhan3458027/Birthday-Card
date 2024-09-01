@@ -1,21 +1,31 @@
 /* General styles for all devices */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
-    padding-top: 50px;
+    background-image: url('your-imag.jpg'); /* Replace 'your-image.jpg' with the path to your image */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
     margin: 0;
+    padding-top: 50px;
+    height: 100vh; /* Full screen height */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    color: #333; /* Default text color */
 }
 
-h1 {
-    text-align: center;
-    color: #333;
-}
-
+/* Styles for sections with a semi-transparent background */
 .section {
     text-align: center;
     margin: 20px;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 8px;
+    backdrop-filter: blur(5px); /* Optional: Adds a slight blur effect to the background */
 }
 
+/* Button styles */
 .button {
     display: inline-block;
     margin-top: 20px;
@@ -41,6 +51,7 @@ h1 {
     transform: scale(1.05);
 }
 
+/* Sidebar styles */
 .sidebar {
     position: fixed;
     top: 50%;
@@ -67,25 +78,13 @@ h1 {
     height: 40px;
 }
 
-.section {
-    text-align: center; /* Center-align the content within the section */
-}
-
-.file-option {
-    display: flex; /* Use flexbox for easy centering */
-    justify-content: center; /* Center the items horizontally */
-    align-items: center; /* Align items vertically centered */
-    gap: 20px; /* Space between the open and download buttons */
-    margin-bottom: 20px; /* Add some margin below for spacing */
-}
-
-
 /* Media Queries for Responsive Design */
 
 /* Mobile Styles */
 @media (max-width: 600px) {
     body {
         padding-top: 20px;
+        justify-content: flex-start; /* Align content to the top on mobile */
     }
 
     .sidebar {
