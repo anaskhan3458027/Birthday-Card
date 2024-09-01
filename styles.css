@@ -1,9 +1,44 @@
-/* styles.css */
+/* General styles for all devices */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f8ff;
     padding-top: 50px;
-    margin-left: 100px; /* Add margin to make room for sidebar */
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.section {
+    text-align: center;
+    margin: 20px;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+.button:active {
+    background-color: #004494;
+    transform: scale(1.05);
 }
 
 .sidebar {
@@ -32,71 +67,73 @@ body {
     height: 40px;
 }
 
-h1 {
-    text-align: center;
-    color: #333;
+/* Media Queries for Responsive Design */
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+    body {
+        padding-top: 20px;
+    }
+
+    .sidebar {
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        margin-bottom: 20px;
+    }
+
+    .sidebar img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .button {
+        width: 80%;
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .section {
+        margin-top: 20px;
+        padding: 10px;
+    }
 }
 
-.button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 15px 30px;
-    font-size: 18px;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    cursor: pointer;
-    margin: 10px;
+/* Tablet Styles */
+@media (min-width: 601px) and (max-width: 992px) {
+    body {
+        padding-top: 40px;
+    }
+
+    .sidebar {
+        left: 5px;
+    }
+
+    .button {
+        font-size: 17px;
+        padding: 12px 25px;
+    }
 }
 
-.button:hover {
-    background-color: #0056b3;
-    transform: scale(1.1);
-}
+/* Desktop Styles */
+@media (min-width: 993px) {
+    body {
+        padding-top: 50px;
+        margin-left: 100px;
+    }
 
-.button:active {
-    background-color: #004494;
-    transform: scale(1.05);
-}
+    .button {
+        font-size: 18px;
+    }
 
-.button span {
-    display: inline-block;
-    position: relative;
-    transition: transform 0.2s ease;
-}
-
-.button span:after {
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: opacity 0.2s ease, right 0.2s ease;
-}
-
-.button:hover span {
-    transform: translateX(10px);
-}
-
-.button:hover span:after {
-    opacity: 1;
-    right: 0;
-}
-
-.section {
-    text-align: center;
-    margin-top: 50px;
-}
-
-#visitorCount {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    background-color: #fff;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    .sidebar {
+        left: 10px;
+    }
 }

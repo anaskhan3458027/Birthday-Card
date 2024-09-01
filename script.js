@@ -1,4 +1,3 @@
-// script.js
 // Function to detect if the user is on a mobile device
 function isMobileDevice() {
     return /Mobi|Android/i.test(navigator.userAgent);
