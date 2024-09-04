@@ -125,6 +125,9 @@ body {
         margin-top: 20px;
         padding: 10px;
     }
+    .poster{
+        justify-self: center;
+    }
 }
 
 /* Tablet Styles */
