@@ -1,28 +1,33 @@
 /* General styles for all devices */
 body {
     font-family: Arial, sans-serif;
-    background-image: url('your-imag.jpg'); /* Replace 'your-image.jpg' with the path to your image */
+    background-color: rgb(156, 211, 233); /* Replace 'your-image.jpg' with the path to your image */
     background-size: cover; /* Ensures the image covers the entire background */
     background-position: center; /* Centers the background image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     margin: 0;
-    padding-top: 50px;
-    height: 100vh; /* Full screen height */
+    padding-top: 20px;
+    height: auto; /* Full screen height */
     display: flex;
     flex-direction: column;
     align-items: center; /* Center content horizontally */
     justify-content: center; /* Center content vertically */
-    color: #333; /* Default text color */
+    color: #2a2a2a; /* Default text color */
 }
 
 /* Styles for sections with a semi-transparent background */
 .section {
     text-align: center;
-    margin: 20px;
-    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
-    padding: 20px;
-    border-radius: 8px;
-    backdrop-filter: blur(5px); /* Optional: Adds a slight blur effect to the background */
+    margin: 10px auto; /* Center the section and add some margin */
+    background-color: rgba(216, 206, 206, 0.8); /* Semi-transparent white background */
+    border-radius: 34px;
+    backdrop-filter: blur(5px); /* Adds a slight blur effect */
+    width: 140%; /* Adjusts the width */
+    max-width: 1300px; /* Limits the maximum width */
+    height: auto; /* Height adjusts based on content */
+    min-height: 200px; /* Ensures a minimum height */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    overflow: hidden; /* Prevents content from overflowing */
 }
 
 /* Button styles */
@@ -32,7 +37,7 @@ body {
     padding: 15px 30px;
     font-size: 18px;
     color: #fff;
-    background-color: #007bff;
+    background-color: #ba6bc7;
     border: none;
     border-radius: 8px;
     text-decoration: none;
@@ -135,10 +140,10 @@ body {
 }
 
 /* Desktop Styles */
-@media (min-width: 993px) {
+@media (min-width: 800px) {
     body {
-        padding-top: 50px;
-        margin-left: 100px;
+        padding-top: 20px;
+        margin-left: 150px;
     }
 
     .button {
@@ -148,4 +153,37 @@ body {
     .sidebar {
         left: 10px;
     }
+}
+
+/* Blog post styles */
+.blog-post {
+    margin-bottom: 20px;
+    padding: auto;
+    background-color: rgba(216, 206, 206, 0.8); /* Slightly transparent background */
+    border-radius: 50px;
+}
+
+.blog-post h3 {
+    margin: 0 0 10px;
+    font-size: 22px;
+    color: #87b3e1;
+}
+
+.blog-post p {
+    margin: 5px 0;
+}
+
+.poster {
+    position: fixed;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%) rotate(-30deg);
+    background-color: rgba(225, 1, 1, 0.8);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 24px;
+    z-index: 1000;
+     /* Initially hidden */
 }

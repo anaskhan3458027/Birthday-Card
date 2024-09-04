@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    
+        
     <!-- Vertical Sidebar with Icons -->
     <div class="sidebar">
         <!-- LinkedIn -->
@@ -44,6 +47,10 @@
         </div>
     </div>
 
+    <div id="maintenance-poster" class="poster">
+        <p>This website is under maintenance</p>
+    </div>
+
     <div class="section">
         <h1>Welcome to My Portfolio</h1>
 
@@ -68,15 +75,28 @@
             <span>Wikification Tool</span>
         </a>
 
-        <!-- Section for additional information -->
-        <h2>About Me</h2>
-        <p><p><strong>Hello, I'm Anas Khan!</strong></p>
+        
+            <div class="section">
+                <h2>Daily Blog</h2>
+                <div id="blogContainer">
+                    <!-- Blogs will be dynamically inserted here -->
+                </div>
+            </div>
 
-            <b>I am a passionate software developer with a B.Tech in Computer Science and Engineering from the Raj Kumar Goel Institute of Technology. I have a solid foundation in various programming languages, including C++, HTML, CSS, and JavaScript, and have experience working with modern web development tools and frameworks. With a keen interest in coding and a strong academic background, I have developed several projects such as a weather app, a wikification tool, and a virtual mouse.
-            
-            I'm always eager to learn new technologies and take on challenging projects. Let's connect and create something amazing together!</b></p>
     </div>
     <!-- Link to the external JavaScript file -->
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
+
+    
+    
+    
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Include the blog script -->
+    <script src="js/blog.js"></script>
 </body>
 </html>
