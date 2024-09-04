@@ -122,11 +122,12 @@ body {
         padding: 10px;
     }
     .blog-post{
-        margin-top: 20px;
-        padding: 10px;
+        justify-content: flex-start;
+        position: relative;
     }
     .poster{
         justify-self: center;
+        position: relative;
     }
 }
 
