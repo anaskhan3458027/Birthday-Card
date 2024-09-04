@@ -1,7 +1,7 @@
 /* General styles for all devices */
 body {
     font-family: Arial, sans-serif;
-    background-color: rgb(156, 211, 233); /* Replace 'your-image.jpg' with the path to your image */
+    background-color: rgb(135, 211, 241); /* Replace 'your-image.jpg' with the path to your image */
     background-size: cover; /* Ensures the image covers the entire background */
     background-position: center; /* Centers the background image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
@@ -122,8 +122,7 @@ body {
         padding: 10px;
     }
     .blog-post{
-        justify-content: flex-start;
-        position: relative;
+        display: center;
     }
     .poster{
         justify-self: center;
