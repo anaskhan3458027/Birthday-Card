@@ -1,41 +1,38 @@
 /* General styles for all devices */
 body {
     font-family: Arial, sans-serif;
-    background-color: rgb(135, 211, 241); /* Replace 'your-image.jpg' with the path to your image */
-    background-size: cover; /* Ensures the image covers the entire background */
-    background-position: center; /* Centers the background image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-color: rgb(135, 211, 241); /* Background color */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     margin: 0;
     padding-top: 20px;
-    height: auto; /* Full screen height */
+    height: auto;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    justify-content: center; /* Center content vertically */
-    color: #2a2a2a; /* Default text color */
+    align-items: center;
+    justify-content: center;
+    color: #2a2a2a;
 }
 
-/* Styles for sections with a semi-transparent background */
 .section {
     text-align: center;
-    margin: 10px auto; /* Center the section and add some margin */
-    background-color: rgba(216, 206, 206, 0.8); /* Semi-transparent white background */
+    margin: 10px auto;
+    background-color: rgba(216, 206, 206, 0.8);
     border-radius: 34px;
-    backdrop-filter: blur(5px); /* Adds a slight blur effect */
-    width: 140%; /* Adjusts the width */
-    max-width: 1300px; /* Limits the maximum width */
-    height: auto; /* Height adjusts based on content */
-    min-height: 200px; /* Ensures a minimum height */
-    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
-    overflow: hidden; /* Prevents content from overflowing */
+    backdrop-filter: blur(5px);
+    width: 90%; /* Responsive width */
+    max-width: 1300px;
+    min-height: 200px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
-/* Button styles */
 .button {
     display: inline-block;
-    margin-top: 20px;
+    margin: 10px;
     padding: 15px 30px;
-    font-size: 18px;
+    font-size: 1rem; /* Responsive font size */
     color: #fff;
     background-color: #ba6bc7;
     border: none;
@@ -43,7 +40,6 @@ body {
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.2s ease;
     cursor: pointer;
-    margin: 10px;
 }
 
 .button:hover {
@@ -56,7 +52,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Sidebar styles */
 .sidebar {
     position: fixed;
     top: 50%;
@@ -70,7 +65,7 @@ body {
 .sidebar a {
     text-decoration: none;
     color: #333;
-    font-size: 20px;
+    font-size: 1.2rem; /* Responsive font size */
     transition: transform 0.3s;
 }
 
@@ -79,101 +74,20 @@ body {
 }
 
 .sidebar img {
-    width: 40px;
-    height: 40px;
+    width: 2rem; /* Responsive image size */
+    height: 2rem;
 }
 
-/* Media Queries for Responsive Design */
-
-/* Mobile Styles */
-@media (max-width: 600px) {
-    body {
-        padding-top: 20px;
-        justify-content: flex-start; /* Align content to the top on mobile */
-    }
-
-    .sidebar {
-        flex-direction: row;
-        justify-content: center;
-        position: relative;
-        top: 0;
-        left: 0;
-        transform: none;
-        margin-bottom: 20px;
-    }
-
-    .sidebar img {
-        width: 30px;
-        height: 30px;
-    }
-
-    .button {
-        width: 80%;
-        font-size: 16px;
-        padding: 10px 20px;
-    }
-
-    h1 {
-        font-size: 24px;
-    }
-
-    .section {
-        margin-top: 20px;
-        padding: 10px;
-    }
-    .blog-post{
-        display: auto;
-        text-align: left;
-    }
-    .poster{
-        padding-top: 20px;
-        justify-content: flex-start; 
-    }
-}
-
-/* Tablet Styles */
-@media (min-width: 601px) and (max-width: 992px) {
-    body {
-        padding-top: 40px;
-    }
-
-    .sidebar {
-        left: 5px;
-    }
-
-    .button {
-        font-size: 17px;
-        padding: 12px 25px;
-    }
-}
-
-/* Desktop Styles */
-@media (min-width: 800px) {
-    body {
-        padding-top: 20px;
-        margin-left: 150px;
-    }
-
-    .button {
-        font-size: 18px;
-    }
-
-    .sidebar {
-        left: 10px;
-    }
-}
-
-/* Blog post styles */
 .blog-post {
     margin-bottom: 20px;
-    padding: auto;
-    background-color: rgba(216, 206, 206, 0.8); /* Slightly transparent background */
+    padding: 1rem;
+    background-color: rgba(216, 206, 206, 0.8);
     border-radius: 50px;
 }
 
 .blog-post h3 {
     margin: 0 0 10px;
-    font-size: 22px;
+    font-size: 1.5rem; /* Responsive font size */
     color: #87b3e1;
 }
 
@@ -187,11 +101,52 @@ body {
     left: 80%;
     transform: translate(-50%, -50%) rotate(-30deg);
     background-color: rgba(219, 112, 112, 0.8);
-    color: rgb(255, 255, 255);
+    color: #fff;
     padding: 20px;
     border-radius: 10px;
     text-align: left;
-    font-size: 24px;
+    font-size: 1.5rem; /* Responsive font size */
     z-index: 1000;
-     /* Initially hidden */
+    display: none; /* Initially hidden */
+}
+
+/* Media Queries for Responsive Design */
+
+/* Tablet Styles */
+@media (min-width: 601px) and (max-width: 992px) {
+    .sidebar {
+        left: 5px;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .sidebar img {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .button {
+        font-size: 1rem; /* Adjusted font size */
+        padding: 12px 25px;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 992px) {
+    body {
+        padding-top: 40px;
+        margin-left: 150px;
+    }
+
+    .button {
+        font-size: 1.1rem; /* Adjusted font size */
+    }
+
+    .sidebar {
+        left: 10px;
+    }
+
+    .poster {
+        font-size: 1.5rem; /* Adjusted font size */
+    }
 }
