@@ -6,7 +6,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     margin: 0;
-    padding-top: 20px;
+    padding-top: 60px; /* Add padding for the fixed top sidebar */
     height: auto;
     display: flex;
     flex-direction: column;
@@ -15,13 +15,46 @@ body {
     color: #2a2a2a;
 }
 
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center; /* Center items horizontally */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: background color for better visibility */
+    padding: 10px 0;
+    width: 100%;
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem; /* Responsive font size */
+    transition: transform 0.3s;
+}
+
+.sidebar a:hover {
+    transform: scale(1.2);
+}
+
+.sidebar img {
+    width: 2rem; /* Responsive image size */
+    height: 2rem;
+}
+
+/* Styles for sections with a semi-transparent background */
 .section {
     text-align: center;
     margin: 10px auto;
     background-color: rgba(216, 206, 206, 0.8);
     border-radius: 34px;
     backdrop-filter: blur(5px);
-    width: 90%; /* Responsive width */
+    width: 90%;
     max-width: 1300px;
     min-height: 200px;
     box-sizing: border-box;
@@ -50,32 +83,6 @@ body {
 .button:active {
     background-color: #004494;
     transform: scale(1.05);
-}
-
-.sidebar {
-    position: fixed;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.sidebar a {
-    text-decoration: none;
-    color: #333;
-    font-size: 1.2rem; /* Responsive font size */
-    transition: transform 0.3s;
-}
-
-.sidebar a:hover {
-    transform: scale(1.2);
-}
-
-.sidebar img {
-    width: 2rem; /* Responsive image size */
-    height: 2rem;
 }
 
 .blog-post {
@@ -112,17 +119,50 @@ body {
 
 /* Media Queries for Responsive Design */
 
-/* Tablet Styles */
-@media (min-width: 601px) and (max-width: 992px) {
+/* Mobile Styles */
+@media (max-width: 600px) {
+    body {
+        padding-top: 60px; /* Adjust padding to fit the fixed sidebar */
+    }
+
     .sidebar {
-        left: 5px;
         flex-direction: row;
         justify-content: center;
     }
 
     .sidebar img {
-        width: 1.5rem;
+        width: 1.5rem; /* Responsive image size */
         height: 1.5rem;
+    }
+
+    .button {
+        font-size: 0.9rem; /* Adjusted font size */
+        padding: 10px 20px;
+    }
+
+    .section {
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    .blog-post {
+        text-align: left;
+    }
+
+    .poster {
+        padding-top: 20px;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 601px) and (max-width: 992px) {
+    .sidebar {
+        padding: 10px 0;
+    }
+
+    .sidebar img {
+        width: 1.75rem; /* Responsive image size */
+        height: 1.75rem;
     }
 
     .button {
@@ -134,16 +174,15 @@ body {
 /* Desktop Styles */
 @media (min-width: 992px) {
     body {
-        padding-top: 40px;
-        margin-left: 150px;
+        padding-top: 60px; /* Adjust padding to fit the fixed sidebar */
+    }
+
+    .sidebar {
+        padding: 10px 0;
     }
 
     .button {
         font-size: 1.1rem; /* Adjusted font size */
-    }
-
-    .sidebar {
-        left: 10px;
     }
 
     .poster {
