@@ -122,7 +122,8 @@ body {
         padding: 10px;
     }
     .blog-post{
-        display: center;
+        display: auto;
+        text-align: left;
     }
     .poster{
         padding-top: 20px;
